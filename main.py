@@ -53,7 +53,27 @@ def dataset_info():
 
 def select_students():
     df = create_dataset()
-    select = df[["Name", "Python", "SQL", "Mathematics", "English"]]
+    student = df[["Name", "Python", "SQL", "Mathematics", "English"]]
     print("=== Selected Student Names & Subject Marks ===")
-    print(select)
-    return select
+    print(student)
+    return student
+def filter_python_marks():
+    df = create_dataset()
+    filtered_marks = df[df["Python"] > 80]
+    print("=== Students Scoring Above 80 in Python ===")
+    print(filtered_marks)
+    return filtered_marks
+def filter_age():
+    df = create_dataset()
+    filtered_age = df[df["Age"] > 21]
+    print("=== Students Aged Above 21 ===")
+    print(filtered_age)
+    return filtered_age
+def filter_course():
+    df = create_dataset()
+    filtered_course = df[df["Course"] == "Python"]
+    print("=== Students Enrolled in Python Course ===")
+    print(filtered_course)
+    return filtered_course
+
+    
