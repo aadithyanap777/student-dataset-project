@@ -32,3 +32,28 @@ def create_dataset():
     
     df = pd.DataFrame(data)
     return df
+def display_students():
+    df = create_dataset()
+    print("=== All Student Records ===")
+    print(df)
+    return df
+def dataset_info():
+    df = create_dataset()
+    print("=== Dataset Information ===")
+    print("--- Head---")
+    print(df.head())
+    print("--- Tail ---")
+    print(df.tail())
+    print("--- Shape ---")
+    print(df.shape)
+    print("--- Columns ---")
+    print(df.columns)
+    print("--- Data Types ---")
+    print(df.dtypes)
+
+def select_students():
+    df = create_dataset()
+    select = df[["Name", "Python", "SQL", "Mathematics", "English"]]
+    print("=== Selected Student Names & Subject Marks ===")
+    print(select)
+    return select
